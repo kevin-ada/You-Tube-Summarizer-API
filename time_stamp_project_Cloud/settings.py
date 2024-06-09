@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 import environ
 
@@ -9,11 +10,11 @@ env = environ.Env()
 environ.Env.read_env()
 
 
-SECRET_KEY = 'django-insecure-)*wjoxjs^47eq7c&w#wpiv#wc9y0lh1r+5t$6@--wgdk$^t_@k'
+SECRET_KEY = "django-insecure-)*wjoxjs^47eq7c&w#wpiv#wc9y0lh1r+5t$6@--wgdk$^t_@k"
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -56,18 +57,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'time_stamp_project_Cloud.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'transcribed_data',
+        'USER': 'postgres',
+        'PASSWORD': 'secret',
+        'HOST': 'db',  # Docker service name for the database
+        'PORT': '5432',
     }
 }
-
-# Password validation
-# https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {

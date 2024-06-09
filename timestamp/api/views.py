@@ -1,5 +1,3 @@
-# timestamp/api/views.py
-
 from django.http import JsonResponse
 from django.views import View
 from main import generate_chapter_titles

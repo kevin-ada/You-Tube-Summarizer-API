@@ -154,3 +154,6 @@ def main():
     for i, (time, title) in enumerate(titles):
         print(f"{time}: {title}")
 
+
+if __name__ == '__main__':
+    main()
