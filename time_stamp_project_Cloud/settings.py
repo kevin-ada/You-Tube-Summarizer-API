@@ -14,7 +14,13 @@ SECRET_KEY = "django-insecure-)*wjoxjs^47eq7c&w#wpiv#wc9y0lh1r+5t$6@--wgdk$^t_@k
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'localhost', 'timestampproject-env.eba-wpmtki9x.us-east-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = [
+    '0.0.0.0',
+    '127.0.0.1',
+    'localhost',
+    'time-stamp.eba-bz9iayke.us-west-2.elasticbeanstalk.com',
+    '172.31.17.58'
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -57,14 +63,21 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'time_stamp_project_Cloud.wsgi.application'
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'transcribed_data',
+#         'USER': 'postgres',
+#         'PASSWORD': 'secret',
+#         'HOST': 'db',  # Docker service name for the database
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'transcribed_data',
-        'USER': 'postgres',
-        'PASSWORD': 'secret',
-        'HOST': 'db',  # Docker service name for the database
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3",
     }
 }
 
