@@ -1,6 +1,4 @@
-Certainly! Here's a comprehensive README for your project, detailing all the steps, technologies, and deployments involved:
 
----
 
 # YouTube Video Summarizer with GPT-4 and YouTube Transcriber APIs
 
