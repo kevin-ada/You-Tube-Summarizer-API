@@ -15,12 +15,11 @@ SECRET_KEY = "django-insecure-)*wjoxjs^47eq7c&w#wpiv#wc9y0lh1r+5t$6@--wgdk$^t_@k
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '0.0.0.0',
-    '127.0.0.1',
     'localhost',
-    'time-stamp.eba-bz9iayke.us-west-2.elasticbeanstalk.com',
-    '172.31.17.58'
+    '127.0.0.1',
+    'django-time.eba-38f5ym3z.eu-north-1.elasticbeanstalk.com'
 ]
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
